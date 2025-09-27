@@ -87,7 +87,7 @@ const Footer = () => {
             </div>
             <div className="flex gap-6 text-sm">
               <a href="#" className="hover:text-ccr-glow transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-ccr-glow transition-colors">Terms of Service</a>
+              <a href="/terms" className="hover:text-ccr-glow transition-colors">Terms of Service</a>
               <a href="#" className="hover:text-ccr-glow transition-colors">Warranty</a>
             </div>
           </div>
