@@ -11,37 +11,37 @@ const ServicesSection = () => {
     {
       title: "Phone Repair",
       icon: phoneIcon,
-      description: "Screen replacements, battery swaps, water damage repair, and software fixes for all phone brands.",
-      features: ["Screen Replacement", "Battery Service", "Water Damage", "Software Issues", "Charging Port Repair"],
-      fromPrice: "$49"
+      description: "Complete smartphone repair services including screen replacement, battery, charging port, cameras, and water damage repair. Express repair in under 1 hour for parts in stock.",
+      features: ["Screen Replacement", "Battery Replacement", "Charging Issues", "Camera Repair", "Water Damage"],
+      fromPrice: "$99"
     },
     {
       title: "Tablet Repair", 
       icon: tabletIcon,
-      description: "Complete tablet repair services including screen repairs, battery replacement, and hardware fixes.",
-      features: ["Screen Repair", "Battery Replacement", "Charging Issues", "Speaker/Camera Fix", "Software Problems"],
-      fromPrice: "$79"
+      description: "Professional tablet repair for all major brands including iPad, Samsung Galaxy Tab, and more. Same quality parts with lifetime warranty on premium repairs.",
+      features: ["Screen Replacement", "Battery Service", "Charging Issues", "Software Problems", "Home Button"],
+      fromPrice: "$120"
     },
     {
       title: "Computer Repair",
       icon: computerIcon,
-      description: "Desktop and laptop repairs, virus removal, hardware upgrades, and performance optimization.",
-      features: ["Virus Removal", "Hardware Upgrade", "Data Recovery", "Performance Boost", "System Setup"],
-      fromPrice: "$89"
+      description: "Desktop and laptop repair services including hardware upgrades, virus removal, and data recovery. On-spot repair by certified technicians.",
+      features: ["Hardware Upgrades", "Virus Removal", "Data Recovery", "OS Installation", "Performance Boost"],
+      fromPrice: "$150"
     },
     {
       title: "Drone Repair",
       icon: droneIcon,
-      description: "Specialized drone repair services including gimbal fixes, propeller replacement, and calibration.",
-      features: ["Gimbal Repair", "Propeller Replace", "Camera Fix", "Flight Calibration", "Remote Control"],
-      fromPrice: "$129"
+      description: "Specialized drone repair services for recreational and commercial drones from all major manufacturers. Expert diagnosis and quality parts.",
+      features: ["Gimbal Repair", "Motor Replacement", "Camera Issues", "Flight Controller", "Propeller Service"],
+      fromPrice: "$180"
     },
     {
-      title: "IT Solutions",
+      title: "Watch & IT Solutions",
       icon: itIcon,
-      description: "Complete IT support for businesses including network setup, security, and ongoing maintenance.",
-      features: ["Network Setup", "Security Systems", "Cloud Migration", "Backup Solutions", "24/7 Support"],
-      fromPrice: "$150"
+      description: "Smartwatch repairs and complete IT support for businesses. From Apple Watch screen replacement to network setup and security solutions.",
+      features: ["Watch Screen Repair", "Network Setup", "Security Solutions", "Cloud Migration", "Accessories"],
+      fromPrice: "$99"
     }
   ];
 
@@ -53,8 +53,8 @@ const ServicesSection = () => {
             Our <span className="text-ccr-primary">Expert</span> Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Professional repair and IT solutions for all your technology needs. 
-            Fast, reliable, and backed by our 90-day warranty.
+            Professional repair services for smartphones, tablets, computers, drones, watches and IT solutions. 
+            Most competitive prices in Brisbane with repairs starting from $99. Special discounts on accessories for repair customers and VIP members.
           </p>
         </div>
 
@@ -98,13 +98,14 @@ const ServicesSection = () => {
 
         {/* Emergency service callout */}
         <div className="bg-gradient-to-r from-ccr-primary to-ccr-secondary rounded-2xl p-8 text-center text-white">
-          <h3 className="text-3xl font-bold mb-4">Need Emergency Repair?</h3>
+          <h3 className="text-3xl font-bold mb-4">Express On-Spot Repair Service</h3>
           <p className="text-xl mb-6 text-white/90">
-            We offer same-day emergency repairs for critical devices. No extra surcharge!
+            Our certified technicians provide express on-spot repair within 1 hour for all parts in stock. 
+            Quality repairs with lifetime warranty on premium services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-ccr-accent hover:bg-ccr-accent/90 text-white font-semibold">
-              Emergency Service
+              Express Repair Service
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-ccr-primary">
               Call Now: (07) 3000-COOL

@@ -10,18 +10,18 @@ const WhyChooseUsSection = () => {
     },
     {
       icon: Clock,
-      title: "Same Day Service",
-      description: "Most repairs completed within hours, not days. Emergency service available 7 days a week."
+      title: "Express On-Spot Repair",
+      description: "Express repair within 1 hour for parts in stock. Certified technicians provide same-day service."
     },
     {
       icon: Users,
-      title: "Expert Technicians",
-      description: "Certified professionals with years of experience in all major device brands and models."
+      title: "15+ Years Experience",
+      description: "Certified technicians with over 15 years experience in repair industry. Expert service since 2008."
     },
     {
       icon: Award,
-      title: "90 Day Warranty",
-      description: "All repairs backed by our comprehensive 90-day warranty for complete customer satisfaction."
+      title: "Lifetime Warranty",
+      description: "All premium repairs backed by our lifetime warranty. Quality parts and services guaranteed."
     },
     {
       icon: MapPin,
@@ -30,8 +30,8 @@ const WhyChooseUsSection = () => {
     },
     {
       icon: Wrench,
-      title: "No Call-Out Fees",
-      description: "Transparent pricing with no hidden fees. Free quotes and competitive repair rates."
+      title: "VIP Member Discounts",
+      description: "Special discounts on accessories for repair customers and VIP members. Best quality for competitive prices."
     }
   ];
 
@@ -43,8 +43,9 @@ const WhyChooseUsSection = () => {
             Why Choose <span className="text-ccr-primary">CCR</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're not just another repair shop. We're your trusted technology partners 
-            committed to delivering exceptional service and results.
+            Family-owned Springfield Central repair shop since 2008. Our certified technicians have 15+ years experience 
+            providing quality repairs with lifetime warranty on premium services. Brisbane's highest-rated repair shop 
+            with 1.5K+ Google reviews at 4.9 stars.
           </p>
         </div>
 
@@ -70,20 +71,20 @@ const WhyChooseUsSection = () => {
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-ccr-elegant">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-ccr-primary">5000+</div>
-              <div className="text-muted-foreground">Devices Repaired</div>
+              <div className="text-4xl font-bold text-ccr-primary">15+</div>
+              <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-ccr-secondary">98%</div>
-              <div className="text-muted-foreground">Success Rate</div>
+              <div className="text-4xl font-bold text-ccr-secondary">1.5K+</div>
+              <div className="text-muted-foreground">Google Reviews</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-ccr-accent">7</div>
-              <div className="text-muted-foreground">Days a Week</div>
+              <div className="text-4xl font-bold text-ccr-accent">4.9★</div>
+              <div className="text-muted-foreground">Google Rating</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-ccr-glow">30min</div>
-              <div className="text-muted-foreground">Average Fix Time</div>
+              <div className="text-4xl font-bold text-ccr-glow">$99</div>
+              <div className="text-muted-foreground">Repairs From</div>
             </div>
           </div>
         </div>

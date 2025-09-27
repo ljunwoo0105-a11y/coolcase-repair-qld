@@ -16,7 +16,7 @@ const HeroSection = () => {
         <div className="max-w-4xl">
           <div className="mb-6">
             <span className="inline-block bg-ccr-accent/20 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-              Springfield Central's #1 Tech Repair Specialists
+              Since 2008 • Family Owned • 4.9★ Google Rating • 1.5K+ Reviews
             </span>
           </div>
           
@@ -26,8 +26,8 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-            Expert repair services for phones, tablets, computers, drones, and complete IT solutions. 
-            <span className="text-ccr-glow font-semibold"> Same day service, no call-out fees!</span>
+            Over 15 years of local experience in Springfield Central. Expert repair services for smartphones, tablets, computers, drones, watches, and complete IT solutions. 
+            <span className="text-ccr-glow font-semibold"> Express repairs in under 1 hour • Repairs from $99!</span>
           </p>
 
           {/* Trust indicators */}
@@ -46,7 +46,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-ccr-glow" />
-              <span>90 Day Warranty</span>
+              <span>Lifetime Warranty</span>
             </div>
           </div>
 
@@ -63,20 +63,20 @@ const HeroSection = () => {
           {/* Quick stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-black/20 backdrop-blur-sm rounded-lg p-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-ccr-glow">5000+</div>
-              <div className="text-white/80 text-sm">Devices Fixed</div>
+              <div className="text-3xl font-bold text-ccr-glow">15+</div>
+              <div className="text-white/80 text-sm">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-ccr-glow">7</div>
-              <div className="text-white/80 text-sm">Days a Week</div>
+              <div className="text-3xl font-bold text-ccr-glow">1.5K+</div>
+              <div className="text-white/80 text-sm">Google Reviews</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-ccr-glow">30min</div>
-              <div className="text-white/80 text-sm">Average Fix Time</div>
+              <div className="text-3xl font-bold text-ccr-glow">4.9★</div>
+              <div className="text-white/80 text-sm">Google Rating</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-ccr-glow">100%</div>
-              <div className="text-white/80 text-sm">Satisfaction Rate</div>
+              <div className="text-3xl font-bold text-ccr-glow">$99</div>
+              <div className="text-white/80 text-sm">Repairs From</div>
             </div>
           </div>
         </div>
