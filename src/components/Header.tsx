@@ -1,27 +1,24 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MapPin } from "lucide-react";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b border-border">
+  return <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b border-border">
       {/* Top bar */}
       <div className="bg-ccr-primary text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
               <Phone className="h-4 w-4" />
-              <span>(07) 3000-COOL</span>
+              <span>0452385321</span>
             </div>
             <div className="flex items-center gap-1">
               <MapPin className="h-4 w-4" />
-              <span>Springfield Central QLD</span>
+              <span>Next to Foot Locker and Boost Juice, Near Food Court, BIGW Mall, Orion Springfield Central, Kiosk 1/1 Main St, Springfield Central QLD 4300</span>
             </div>
           </div>
           <div className="hidden md:block">
-            <span>7 Days a Week • Same Day Service Available</span>
+            
           </div>
         </div>
       </div>
@@ -64,17 +61,13 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+        {isMenuOpen && <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               <a href="#home" className="text-foreground hover:text-ccr-primary transition-colors">
                 Home
@@ -97,11 +90,8 @@ const Header = () => {
                 </Button>
               </div>
             </nav>
-          </div>
-        )}
+          </div>}
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
