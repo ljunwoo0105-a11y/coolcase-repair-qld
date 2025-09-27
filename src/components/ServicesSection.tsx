@@ -37,11 +37,18 @@ const ServicesSection = () => {
       fromPrice: "$180"
     },
     {
-      title: "Watch & IT Solutions",
+      title: "Watch Repair",
       icon: itIcon,
-      description: "Smartwatch repairs and complete IT support for businesses. From Apple Watch screen replacement to network setup and security solutions.",
-      features: ["Watch Screen Repair", "Network Setup", "Security Solutions", "Cloud Migration", "Accessories"],
+      description: "Professional smartwatch and traditional watch repair services. From Apple Watch screen replacement to battery issues and water damage repair.",
+      features: ["Screen Replacement", "Battery Service", "Water Damage", "Crown/Button Repair", "Software Issues"],
       fromPrice: "$99"
+    },
+    {
+      title: "IT Solutions",
+      icon: computerIcon,
+      description: "Complete IT support for businesses including network setup, security solutions, cloud migration, and ongoing maintenance services.",
+      features: ["Network Setup", "Security Solutions", "Cloud Migration", "System Administration", "24/7 Support"],
+      fromPrice: "$150"
     }
   ];
 
