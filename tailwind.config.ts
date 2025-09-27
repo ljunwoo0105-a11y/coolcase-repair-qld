@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // CCR Brand Colors
+        "ccr-primary": "hsl(var(--ccr-primary))",
+        "ccr-secondary": "hsl(var(--ccr-secondary))",
+        "ccr-accent": "hsl(var(--ccr-accent))",
+        "ccr-glow": "hsl(var(--ccr-glow))",
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-subtle": "var(--gradient-subtle)",
+      },
+      boxShadow: {
+        "ccr-elegant": "var(--shadow-elegant)",
+        "ccr-glow": "var(--shadow-ccr-glow)",
       },
       borderRadius: {
         lg: "var(--radius)",
