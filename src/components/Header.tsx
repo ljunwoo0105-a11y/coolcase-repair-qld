@@ -28,15 +28,15 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold">
+            <a href="/" className="text-2xl font-bold cursor-pointer hover:opacity-80 transition-opacity">
               <span className="text-ccr-primary">CCR</span>
               <span className="text-ccr-secondary ml-2">COOL CASE REPAIR</span>
-            </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-ccr-primary transition-colors">
+            <a href="/" className="text-foreground hover:text-ccr-primary transition-colors">
               Home
             </a>
             <a href="#services" className="text-foreground hover:text-ccr-primary transition-colors">
@@ -69,7 +69,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
-              <a href="#home" className="text-foreground hover:text-ccr-primary transition-colors">
+              <a href="/" className="text-foreground hover:text-ccr-primary transition-colors">
                 Home
               </a>
               <a href="#services" className="text-foreground hover:text-ccr-primary transition-colors">
