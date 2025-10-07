@@ -95,8 +95,8 @@ const ReviewsSection = () => {
             <div className="flex">
               {renderStars(5)}
             </div>
-            <span className="font-semibold">5.0 rating</span>
-            <span className="text-muted-foreground">• 500+ reviews</span>
+            <span className="font-semibold">4.9 rating</span>
+            <span className="text-muted-foreground">• 1500+ reviews</span>
           </div>
         </div>
 
