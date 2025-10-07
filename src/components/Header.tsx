@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold cursor-pointer hover:opacity-80 transition-opacity">
+            <a href="/" className="text-3xl md:text-4xl font-bold cursor-pointer hover:opacity-80 transition-opacity">
               <span className="text-ccr-primary">CCR</span>
               <span className="text-ccr-secondary ml-2"></span>
             </a>
