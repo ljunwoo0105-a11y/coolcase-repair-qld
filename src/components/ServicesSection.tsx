@@ -41,7 +41,7 @@ const ServicesSection = () => {
       icon: itIcon,
       description: "Professional smartwatch and traditional watch repair services. From Apple Watch screen replacement to battery issues and water damage repair.",
       features: ["Screen Replacement", "Battery Service", "Water Damage", "Crown/Button Repair", "Software Issues"],
-      fromPrice: "$99"
+      fromPrice: "$30"
     },
     {
       title: "IT Solutions",
