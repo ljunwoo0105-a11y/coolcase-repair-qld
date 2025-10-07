@@ -5,41 +5,6 @@ import team3 from "@/assets/team-3.jpg";
 import team4 from "@/assets/team-4.jpg";
 
 const TeamSection = () => {
-  const team = [
-    {
-      id: 1,
-      name: "James Mitchell",
-      role: "Lead Technician",
-      specialty: "Mobile & Tablet Repair",
-      image: team1,
-      experience: "8+ years"
-    },
-    {
-      id: 2,
-      name: "Sarah Chen",
-      role: "Senior Technician",
-      specialty: "Computer & IT Solutions",
-      image: team2,
-      experience: "6+ years"
-    },
-    {
-      id: 3,
-      name: "Robert Thompson",
-      role: "Master Technician",
-      specialty: "Advanced Diagnostics",
-      image: team3,
-      experience: "15+ years"
-    },
-    {
-      id: 4,
-      name: "Daniel Martinez",
-      role: "Repair Specialist",
-      specialty: "Drone & Electronics",
-      image: team4,
-      experience: "4+ years"
-    }
-  ];
-
   return (
     <section className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
@@ -55,27 +20,89 @@ const TeamSection = () => {
 
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member) => (
-            <Card key={member.id} className="overflow-hidden hover:shadow-xl transition-shadow group">
-              <div className="relative overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                  <div className="text-white">
-                    <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">{member.experience}</p>
-                  </div>
+          {/* Team Member 1 */}
+          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img
+                src={team1}
+                alt="James Mitchell"
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">8+ years</p>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">{member.role}</p>
-                <p className="text-sm text-muted-foreground">{member.specialty}</p>
-              </CardContent>
-            </Card>
-          ))}
+            </div>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">James Mitchell</h3>
+              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Lead Technician</p>
+              <p className="text-sm text-muted-foreground">Mobile & Tablet Repair</p>
+            </CardContent>
+          </Card>
+
+          {/* Team Member 2 */}
+          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img
+                src={team2}
+                alt="Sarah Chen"
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">6+ years</p>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Sarah Chen</h3>
+              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Senior Technician</p>
+              <p className="text-sm text-muted-foreground">Computer & IT Solutions</p>
+            </CardContent>
+          </Card>
+
+          {/* Team Member 3 */}
+          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img
+                src={team3}
+                alt="Robert Thompson"
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">15+ years</p>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Robert Thompson</h3>
+              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Master Technician</p>
+              <p className="text-sm text-muted-foreground">Advanced Diagnostics</p>
+            </CardContent>
+          </Card>
+
+          {/* Team Member 4 */}
+          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img
+                src={team4}
+                alt="Daniel Martinez"
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">4+ years</p>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Daniel Martinez</h3>
+              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Repair Specialist</p>
+              <p className="text-sm text-muted-foreground">Drone & Electronics</p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Trust Message */}
