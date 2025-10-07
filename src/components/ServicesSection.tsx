@@ -13,7 +13,7 @@ const ServicesSection = () => {
       icon: phoneIcon,
       description: "Complete smartphone repair services including screen replacement, battery, charging port, cameras, and water damage repair. Express repair in under 1 hour for parts in stock.",
       features: ["Screen Replacement", "Battery Replacement", "Charging Issues", "Camera Repair", "Water Damage"],
-      fromPrice: "$59"
+      fromPrice: "$99"
     },
     {
       title: "Tablet Repair", 
