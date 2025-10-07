@@ -145,7 +145,7 @@ const ReviewsSection = () => {
         <div className="text-center mt-12">
           <a
             href="https://g.co/kgs/pBP8yWz"
-            target="_blank"
+            target="_top"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[hsl(var(--ccr-primary))] hover:text-[hsl(var(--ccr-secondary))] font-semibold transition-colors"
           >
