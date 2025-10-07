@@ -1,11 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import lucasPhoto from "@/assets/lucas-photo.jpg";
 import ryanPhoto from "@/assets/ryan-photo.jpg";
 import robertPhoto from "@/assets/robert-photo.jpg";
@@ -13,10 +7,8 @@ import kylePhoto from "@/assets/kyle-photo.jpg";
 import sarahPhoto from "@/assets/sarah-photo.jpg";
 import jamesPhoto from "@/assets/james-photo.jpg";
 import emmaPhoto from "@/assets/emma-photo.jpg";
-
 const TeamSection = () => {
-  return (
-    <section id="team" className="py-16 px-4 bg-background">
+  return <section id="team" className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
@@ -29,13 +21,10 @@ const TeamSection = () => {
         </div>
 
         {/* Team Carousel */}
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-6xl mx-auto"
-        >
+        <Carousel opts={{
+        align: "start",
+        loop: true
+      }} className="w-full max-w-6xl mx-auto">
           <CarouselContent className="-ml-2 md:-ml-4">
             {/* Team Member 1 */}
             <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
@@ -176,16 +165,10 @@ const TeamSection = () => {
 
         {/* Trust Message */}
         <div className="mt-12 text-center bg-muted/50 rounded-lg p-8">
-          <p className="text-lg font-medium mb-2">
-            All our technicians are fully certified and insured
-          </p>
-          <p className="text-muted-foreground">
-            With over 50 years of combined experience, we're committed to excellence in every repair
-          </p>
+          <p className="text-lg font-medium mb-2">All our Technicians are Fully Certified and Experienced</p>
+          <p className="text-muted-foreground">With over 15 years of experience, we're committed to excellence in every repair</p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TeamSection;
