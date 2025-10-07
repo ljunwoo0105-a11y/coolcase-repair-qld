@@ -1,8 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
-import team4 from "@/assets/team-4.jpg";
+import ryanPhoto from "@/assets/ryan-photo.jpg";
 const TeamSection = () => {
   return <section className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
@@ -20,14 +17,6 @@ const TeamSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Team Member 1 */}
           <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={team1} alt="James Mitchell" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">20+ years</p>
-                </div>
-              </div>
-            </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Lucas</h3>
               <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Master Technician</p>
@@ -38,7 +27,7 @@ const TeamSection = () => {
           {/* Team Member 2 */}
           <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
             <div className="relative overflow-hidden">
-              <img src={team2} alt="Sarah Chen" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <img src={ryanPhoto} alt="Ryan - Retail Manager & Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                 <div className="text-white">
                   <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">8+ years</p>
@@ -47,21 +36,13 @@ const TeamSection = () => {
             </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Ryan</h3>
-              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Retail Manager & Senior Technician</p>
+              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Retail Manager & Senior Technician</p>
               <p className="text-sm text-muted-foreground">Phone, Tablet and Computer Technician</p>
             </CardContent>
           </Card>
 
           {/* Team Member 3 */}
           <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={team3} alt="Robert Thompson" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">10+ years</p>
-                </div>
-              </div>
-            </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Robert Thompson</h3>
               <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Repair Specialist</p>
@@ -71,14 +52,6 @@ const TeamSection = () => {
 
           {/* Team Member 4 */}
           <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={team4} alt="Daniel Martinez" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">4+ years</p>
-                </div>
-              </div>
-            </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Kyle</h3>
               <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">IT Specialist</p>
