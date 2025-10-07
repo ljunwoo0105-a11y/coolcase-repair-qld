@@ -1,5 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
+import lucasPhoto from "@/assets/lucas-photo.jpg";
 import ryanPhoto from "@/assets/ryan-photo.jpg";
+import robertPhoto from "@/assets/robert-photo.jpg";
+import kylePhoto from "@/assets/kyle-photo.jpg";
 const TeamSection = () => {
   return <section className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
@@ -17,6 +20,14 @@ const TeamSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Team Member 1 */}
           <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img src={lucasPhoto} alt="Lucas - Master Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">20+ years</p>
+                </div>
+              </div>
+            </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Lucas</h3>
               <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Master Technician</p>
@@ -43,6 +54,14 @@ const TeamSection = () => {
 
           {/* Team Member 3 */}
           <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img src={robertPhoto} alt="Robert Thompson - Repair Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">10+ years</p>
+                </div>
+              </div>
+            </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Robert Thompson</h3>
               <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Repair Specialist</p>
@@ -52,6 +71,14 @@ const TeamSection = () => {
 
           {/* Team Member 4 */}
           <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img src={kylePhoto} alt="Kyle - IT Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">4+ years</p>
+                </div>
+              </div>
+            </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Kyle</h3>
               <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">IT Specialist</p>
