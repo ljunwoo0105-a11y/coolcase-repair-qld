@@ -46,7 +46,13 @@ const Header = () => {
               Services
             </a>
             <a href="#about" className="text-foreground hover:text-ccr-primary transition-colors">
-              About
+              Why Choose Us
+            </a>
+            <a href="#reviews" className="text-foreground hover:text-ccr-primary transition-colors">
+              Reviews
+            </a>
+            <a href="#team" className="text-foreground hover:text-ccr-primary transition-colors">
+              Team
             </a>
             <a href="#contact" className="text-foreground hover:text-ccr-primary transition-colors">
               Contact
@@ -72,16 +78,22 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-foreground hover:text-ccr-primary transition-colors">
+              <a href="/" className="text-foreground hover:text-ccr-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Home
               </a>
-              <a href="#services" className="text-foreground hover:text-ccr-primary transition-colors">
+              <a href="#services" className="text-foreground hover:text-ccr-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Services
               </a>
-              <a href="#about" className="text-foreground hover:text-ccr-primary transition-colors">
-                About
+              <a href="#about" className="text-foreground hover:text-ccr-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Why Choose Us
               </a>
-              <a href="#contact" className="text-foreground hover:text-ccr-primary transition-colors">
+              <a href="#reviews" className="text-foreground hover:text-ccr-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Reviews
+              </a>
+              <a href="#team" className="text-foreground hover:text-ccr-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Team
+              </a>
+              <a href="#contact" className="text-foreground hover:text-ccr-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </a>
               <div className="flex flex-col gap-3 pt-4">

@@ -16,7 +16,7 @@ import emmaPhoto from "@/assets/emma-photo.jpg";
 
 const TeamSection = () => {
   return (
-    <section className="py-16 px-4 bg-background">
+    <section id="team" className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
