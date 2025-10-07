@@ -3,6 +3,9 @@ import lucasPhoto from "@/assets/lucas-photo.jpg";
 import ryanPhoto from "@/assets/ryan-photo.jpg";
 import robertPhoto from "@/assets/robert-photo.jpg";
 import kylePhoto from "@/assets/kyle-photo.jpg";
+import sarahPhoto from "@/assets/sarah-photo.jpg";
+import jamesPhoto from "@/assets/james-photo.jpg";
+import emmaPhoto from "@/assets/emma-photo.jpg";
 const TeamSection = () => {
   return <section className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
@@ -85,6 +88,57 @@ const TeamSection = () => {
               <p className="text-sm text-muted-foreground">Computer and IT Solutions</p>
             </CardContent>
           </Card>
+
+          {/* Team Member 5 */}
+          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img src={sarahPhoto} alt="Sarah - Customer Support Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">6+ years</p>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Sarah</h3>
+              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Customer Support Specialist</p>
+              <p className="text-sm text-muted-foreground">Phone and Tablet Repairs, Customer Service</p>
+            </CardContent>
+          </Card>
+
+          {/* Team Member 6 */}
+          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img src={jamesPhoto} alt="James - Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">7+ years</p>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">James</h3>
+              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Senior Technician</p>
+              <p className="text-sm text-muted-foreground">Screen Repairs and Hardware Diagnostics</p>
+            </CardContent>
+          </Card>
+
+          {/* Team Member 7 */}
+          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <div className="relative overflow-hidden">
+              <img src={emmaPhoto} alt="Emma - Data Recovery Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="text-white">
+                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">5+ years</p>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Emma</h3>
+              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Data Recovery Specialist</p>
+              <p className="text-sm text-muted-foreground">Data Recovery and Software Solutions</p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Trust Message */}
@@ -93,7 +147,7 @@ const TeamSection = () => {
             All our technicians are fully certified and insured
           </p>
           <p className="text-muted-foreground">
-            With over 30 years of combined experience, we're committed to excellence in every repair
+            With over 50 years of combined experience, we're committed to excellence in every repair
           </p>
         </div>
       </div>
