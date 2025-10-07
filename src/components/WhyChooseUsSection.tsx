@@ -5,8 +5,8 @@ const WhyChooseUsSection = () => {
   const features = [
     {
       icon: Shield,
-      title: "Licensed & Insured",
-      description: "Fully licensed technicians with comprehensive insurance coverage for your peace of mind."
+      title: "Certified & Insured",
+      description: "Fully certified technicians with comprehensive insurance coverage for your peace of mind."
     },
     {
       icon: Clock,
