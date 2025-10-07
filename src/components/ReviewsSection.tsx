@@ -24,7 +24,7 @@ const ReviewsSection = () => {
       rating: 5,
       date: "1 month ago",
       text: "Great experience from start to finish. Fast turnaround time and fair pricing. My iPhone works perfectly now. Will definitely use their services again.",
-      image: reviewer2
+      avatar: "SJ"
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const ReviewsSection = () => {
       rating: 5,
       date: "1 week ago",
       text: "Best repair shop in Brisbane! They repaired my tablet screen perfectly and it looks brand new. The staff was super helpful and explained everything clearly.",
-      image: reviewer4
+      avatar: "EW"
     },
     {
       id: 5,
@@ -107,11 +107,17 @@ const ReviewsSection = () => {
               <CardContent className="pt-6">
                 {/* Reviewer Info */}
                 <div className="flex items-start gap-3 mb-4">
-                  <img 
-                    src={review.image} 
-                    alt={review.name}
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                  {review.image ? (
+                    <img 
+                      src={review.image} 
+                      alt={review.name}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--ccr-primary))] text-primary-foreground flex items-center justify-center font-semibold text-sm">
+                      {review.avatar}
+                    </div>
+                  )}
                   <div className="flex-1">
                     <h3 className="font-semibold">{review.name}</h3>
                     <div className="flex items-center gap-2">
