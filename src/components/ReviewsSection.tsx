@@ -1,5 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import reviewer1 from "@/assets/reviewer-1.jpg";
+import reviewer2 from "@/assets/reviewer-2.jpg";
+import reviewer3 from "@/assets/reviewer-3.jpg";
+import reviewer4 from "@/assets/reviewer-4.jpg";
+import reviewer5 from "@/assets/reviewer-5.jpg";
+import reviewer6 from "@/assets/reviewer-6.jpg";
 
 const ReviewsSection = () => {
   const reviews = [
@@ -9,7 +15,7 @@ const ReviewsSection = () => {
       rating: 5,
       date: "2 weeks ago",
       text: "Excellent service! My phone screen was replaced quickly and professionally. The technician was very knowledgeable and friendly. Highly recommend!",
-      avatar: "JS"
+      image: reviewer1
     },
     {
       id: 2,
@@ -17,7 +23,7 @@ const ReviewsSection = () => {
       rating: 5,
       date: "1 month ago",
       text: "Great experience from start to finish. Fast turnaround time and fair pricing. My iPhone works perfectly now. Will definitely use their services again.",
-      avatar: "SJ"
+      image: reviewer2
     },
     {
       id: 3,
@@ -25,7 +31,7 @@ const ReviewsSection = () => {
       rating: 5,
       date: "3 weeks ago",
       text: "Very professional and efficient service. They fixed my laptop same day and the price was very reasonable. Customer service was outstanding!",
-      avatar: "MC"
+      image: reviewer3
     },
     {
       id: 4,
@@ -33,7 +39,7 @@ const ReviewsSection = () => {
       rating: 5,
       date: "1 week ago",
       text: "Best repair shop in Brisbane! They repaired my tablet screen perfectly and it looks brand new. The staff was super helpful and explained everything clearly.",
-      avatar: "EW"
+      image: reviewer4
     },
     {
       id: 5,
@@ -41,7 +47,7 @@ const ReviewsSection = () => {
       rating: 5,
       date: "2 months ago",
       text: "Outstanding service! Quick diagnosis, quality parts, and excellent workmanship. My phone was fixed in less than an hour. Couldn't be happier!",
-      avatar: "DB"
+      image: reviewer5
     },
     {
       id: 6,
@@ -49,7 +55,7 @@ const ReviewsSection = () => {
       rating: 5,
       date: "3 weeks ago",
       text: "Fantastic service! They rescued all my data from a water-damaged phone. Very professional team and great customer care. Highly recommended!",
-      avatar: "LA"
+      image: reviewer6
     }
   ];
 
@@ -97,9 +103,11 @@ const ReviewsSection = () => {
               <CardContent className="pt-6">
                 {/* Reviewer Info */}
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[hsl(var(--ccr-primary))] text-primary-foreground flex items-center justify-center font-semibold">
-                    {review.avatar}
-                  </div>
+                  <img 
+                    src={review.image} 
+                    alt={review.name}
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
                   <div className="flex-1">
                     <h3 className="font-semibold">{review.name}</h3>
                     <p className="text-sm text-muted-foreground">{review.date}</p>
