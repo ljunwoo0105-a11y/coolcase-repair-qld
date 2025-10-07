@@ -166,7 +166,44 @@ const TeamSection = () => {
         {/* Trust Message */}
         <div className="mt-12 text-center bg-muted/50 rounded-lg p-8">
           <p className="text-lg font-medium mb-2">All our Technicians are Fully Certified and Experienced</p>
-          <p className="text-muted-foreground">With over 15 years of experience, we're committed to excellence in every repair</p>
+          <p className="text-muted-foreground mb-6">With over 15 years of experience, we're committed to excellence in every repair</p>
+          
+          <div className="max-w-3xl mx-auto text-left mt-8 bg-card rounded-lg p-6 border border-border">
+            <h3 className="text-lg font-semibold mb-4 text-center">Certification Requirements</h3>
+            <p className="text-sm text-muted-foreground mb-4 text-center">
+              To be a certified technician, our technicians have obtained a minimum of 3 of these requirements:
+            </p>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-3">
+                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
+                <span>Completed Bachelor Degree in Electrical Engineering, Information Technology, or Relevant Degrees</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
+                <span>Minimum 5 years Repair Experience</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
+                <span>Repaired over 1000 Devices per Technician</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
+                <span>Completed Relevant Certified Repair Courses such as Apple, Samsung, Oppo, Huawei, Google Independent Repair Program, etc.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
+                <span>Completed IPC Logic Board Repair Program</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
+                <span>Completed Data Recovery Program</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
+                <span>Ex-Apple and Samsung Repair Technician</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>;
