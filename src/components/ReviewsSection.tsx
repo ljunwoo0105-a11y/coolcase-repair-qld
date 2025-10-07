@@ -7,6 +7,7 @@ import reviewer4 from "@/assets/reviewer-4.jpg";
 import reviewer5 from "@/assets/reviewer-5.jpg";
 import reviewer6 from "@/assets/reviewer-6.jpg";
 import googleLogo from "@/assets/google-logo.svg";
+import { Button } from "@/components/ui/button";
 
 const ReviewsSection = () => {
   const reviews = [
@@ -143,15 +144,28 @@ const ReviewsSection = () => {
 
         {/* Google Link */}
         <div className="text-center mt-12">
-          <a
-            href="https://g.co/kgs/pBP8yWz"
-            target="_top"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[hsl(var(--ccr-primary))] hover:text-[hsl(var(--ccr-secondary))] font-semibold transition-colors"
-          >
-            Read all reviews on Google
-            <span className="text-lg">→</span>
-          </a>
+          <div className="inline-flex items-center gap-3">
+            <a
+              href="https://g.co/kgs/pBP8yWz"
+              target="_top"
+              rel="noopener noreferrer nofollow"
+              className="inline-flex items-center gap-2 text-[hsl(var(--ccr-primary))] hover:text-[hsl(var(--ccr-secondary))] font-semibold transition-colors"
+              aria-label="Read all CCR Tech Repair reviews on Google"
+            >
+              Read all reviews on Google
+              <span className="text-lg">→</span>
+            </a>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                navigator.clipboard.writeText("https://g.co/kgs/pBP8yWz");
+              }}
+              aria-label="Copy Google reviews link"
+            >
+              Copy link
+            </Button>
+          </div>
         </div>
       </div>
     </section>
