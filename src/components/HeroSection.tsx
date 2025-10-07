@@ -51,7 +51,7 @@ PHONE REPAIR SERVICES</span><br />
             <Button size="lg" className="bg-ccr-accent hover:bg-ccr-accent/90 text-white text-lg px-8 py-4 h-auto font-semibold shadow-ccr-glow">
               Book Free Quote
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-ccr-primary text-lg px-8 py-4 h-auto font-semibold backdrop-blur-sm">Call or Text 0452 385 321</Button>
+            <Button size="lg" variant="outline" className="border-2 border-white bg-white/10 text-white hover:bg-white hover:text-[hsl(var(--ccr-primary))] text-lg px-8 py-4 h-auto font-semibold backdrop-blur-sm transition-all">Call or Text 0452 385 321</Button>
           </div>
 
           {/* Quick stats */}
