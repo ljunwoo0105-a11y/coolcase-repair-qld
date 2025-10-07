@@ -1,4 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import lucasPhoto from "@/assets/lucas-photo.jpg";
 import ryanPhoto from "@/assets/ryan-photo.jpg";
 import robertPhoto from "@/assets/robert-photo.jpg";
@@ -6,8 +13,10 @@ import kylePhoto from "@/assets/kyle-photo.jpg";
 import sarahPhoto from "@/assets/sarah-photo.jpg";
 import jamesPhoto from "@/assets/james-photo.jpg";
 import emmaPhoto from "@/assets/emma-photo.jpg";
+
 const TeamSection = () => {
-  return <section className="py-16 px-4 bg-background">
+  return (
+    <section className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
@@ -19,127 +28,151 @@ const TeamSection = () => {
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Team Member 1 */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={lucasPhoto} alt="Lucas - Master Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">20+ years</p>
+        {/* Team Carousel */}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {/* Team Member 1 */}
+            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
+                <div className="relative overflow-hidden">
+                  <img src={lucasPhoto} alt="Lucas - Master Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <div className="text-white">
+                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">20+ years</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">Lucas</h3>
-              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Master Technician</p>
-              <p className="text-sm text-muted-foreground">Advanced Repairs including PCB Board Repairs and Data Recovery</p>
-            </CardContent>
-          </Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-1">Lucas</h3>
+                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Master Technician</p>
+                  <p className="text-sm text-muted-foreground">Advanced Repairs including PCB Board Repairs and Data Recovery</p>
+                </CardContent>
+              </Card>
+            </CarouselItem>
 
-          {/* Team Member 2 */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={ryanPhoto} alt="Ryan - Retail Manager & Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">8+ years</p>
+            {/* Team Member 2 */}
+            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
+                <div className="relative overflow-hidden">
+                  <img src={ryanPhoto} alt="Ryan - Retail Manager & Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <div className="text-white">
+                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">8+ years</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">Ryan</h3>
-              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Retail Manager & Senior Technician</p>
-              <p className="text-sm text-muted-foreground">Phone, Tablet and Computer Technician</p>
-            </CardContent>
-          </Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-1">Ryan</h3>
+                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Retail Manager & Senior Technician</p>
+                  <p className="text-sm text-muted-foreground">Phone, Tablet and Computer Technician</p>
+                </CardContent>
+              </Card>
+            </CarouselItem>
 
-          {/* Team Member 3 */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={robertPhoto} alt="Robert Thompson - Repair Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">10+ years</p>
+            {/* Team Member 3 */}
+            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
+                <div className="relative overflow-hidden">
+                  <img src={robertPhoto} alt="Robert Thompson - Repair Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <div className="text-white">
+                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">10+ years</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">Robert Thompson</h3>
-              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Repair Specialist</p>
-              <p className="text-sm text-muted-foreground">Advanced Diagnostics, Drone and IT Specialist</p>
-            </CardContent>
-          </Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-1">Robert Thompson</h3>
+                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Repair Specialist</p>
+                  <p className="text-sm text-muted-foreground">Advanced Diagnostics, Drone and IT Specialist</p>
+                </CardContent>
+              </Card>
+            </CarouselItem>
 
-          {/* Team Member 4 */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={kylePhoto} alt="Kyle - IT Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">4+ years</p>
+            {/* Team Member 4 */}
+            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
+                <div className="relative overflow-hidden">
+                  <img src={kylePhoto} alt="Kyle - IT Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <div className="text-white">
+                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">4+ years</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">Kyle</h3>
-              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">IT Specialist</p>
-              <p className="text-sm text-muted-foreground">Computer and IT Solutions</p>
-            </CardContent>
-          </Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-1">Kyle</h3>
+                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">IT Specialist</p>
+                  <p className="text-sm text-muted-foreground">Computer and IT Solutions</p>
+                </CardContent>
+              </Card>
+            </CarouselItem>
 
-          {/* Team Member 5 */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={sarahPhoto} alt="Sarah - Customer Support Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">6+ years</p>
+            {/* Team Member 5 */}
+            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
+                <div className="relative overflow-hidden">
+                  <img src={sarahPhoto} alt="Sarah - Customer Support Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <div className="text-white">
+                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">6+ years</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">Sarah</h3>
-              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Customer Support Specialist</p>
-              <p className="text-sm text-muted-foreground">Phone and Tablet Repairs, Customer Service</p>
-            </CardContent>
-          </Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-1">Sarah</h3>
+                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Customer Support Specialist</p>
+                  <p className="text-sm text-muted-foreground">Phone and Tablet Repairs, Customer Service</p>
+                </CardContent>
+              </Card>
+            </CarouselItem>
 
-          {/* Team Member 6 */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={jamesPhoto} alt="James - Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">7+ years</p>
+            {/* Team Member 6 */}
+            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
+                <div className="relative overflow-hidden">
+                  <img src={jamesPhoto} alt="James - Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <div className="text-white">
+                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">7+ years</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">James</h3>
-              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Senior Technician</p>
-              <p className="text-sm text-muted-foreground">Screen Repairs and Hardware Diagnostics</p>
-            </CardContent>
-          </Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-1">James</h3>
+                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Senior Technician</p>
+                  <p className="text-sm text-muted-foreground">Screen Repairs and Hardware Diagnostics</p>
+                </CardContent>
+              </Card>
+            </CarouselItem>
 
-          {/* Team Member 7 */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-            <div className="relative overflow-hidden">
-              <img src={emmaPhoto} alt="Emma - Data Recovery Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="text-white">
-                  <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">5+ years</p>
+            {/* Team Member 7 */}
+            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
+                <div className="relative overflow-hidden">
+                  <img src={emmaPhoto} alt="Emma - Data Recovery Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <div className="text-white">
+                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">5+ years</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">Emma</h3>
-              <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Data Recovery Specialist</p>
-              <p className="text-sm text-muted-foreground">Data Recovery and Software Solutions</p>
-            </CardContent>
-          </Card>
-        </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-1">Emma</h3>
+                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Data Recovery Specialist</p>
+                  <p className="text-sm text-muted-foreground">Data Recovery and Software Solutions</p>
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
 
         {/* Trust Message */}
         <div className="mt-12 text-center bg-muted/50 rounded-lg p-8">
@@ -151,6 +184,8 @@ const TeamSection = () => {
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default TeamSection;
