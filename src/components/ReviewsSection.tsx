@@ -6,6 +6,7 @@ import reviewer3 from "@/assets/reviewer-3.jpg";
 import reviewer4 from "@/assets/reviewer-4.jpg";
 import reviewer5 from "@/assets/reviewer-5.jpg";
 import reviewer6 from "@/assets/reviewer-6.jpg";
+import googleLogo from "@/assets/google-logo.svg";
 
 const ReviewsSection = () => {
   const reviews = [
@@ -81,9 +82,12 @@ const ReviewsSection = () => {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our Customers Say
-          </h2>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              What Our Customers Say
+            </h2>
+            <img src={googleLogo} alt="Google" className="w-10 h-10" />
+          </div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Real reviews from real customers on Google
           </p>
@@ -110,7 +114,10 @@ const ReviewsSection = () => {
                   />
                   <div className="flex-1">
                     <h3 className="font-semibold">{review.name}</h3>
-                    <p className="text-sm text-muted-foreground">{review.date}</p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm text-muted-foreground">{review.date}</p>
+                      <img src={googleLogo} alt="Posted on Google" className="w-4 h-4" />
+                    </div>
                   </div>
                 </div>
 
