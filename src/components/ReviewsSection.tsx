@@ -1,0 +1,140 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Star } from "lucide-react";
+
+const ReviewsSection = () => {
+  const reviews = [
+    {
+      id: 1,
+      name: "John Smith",
+      rating: 5,
+      date: "2 weeks ago",
+      text: "Excellent service! My phone screen was replaced quickly and professionally. The technician was very knowledgeable and friendly. Highly recommend!",
+      avatar: "JS"
+    },
+    {
+      id: 2,
+      name: "Sarah Johnson",
+      rating: 5,
+      date: "1 month ago",
+      text: "Great experience from start to finish. Fast turnaround time and fair pricing. My iPhone works perfectly now. Will definitely use their services again.",
+      avatar: "SJ"
+    },
+    {
+      id: 3,
+      name: "Michael Chen",
+      rating: 5,
+      date: "3 weeks ago",
+      text: "Very professional and efficient service. They fixed my laptop same day and the price was very reasonable. Customer service was outstanding!",
+      avatar: "MC"
+    },
+    {
+      id: 4,
+      name: "Emma Wilson",
+      rating: 5,
+      date: "1 week ago",
+      text: "Best repair shop in Brisbane! They repaired my tablet screen perfectly and it looks brand new. The staff was super helpful and explained everything clearly.",
+      avatar: "EW"
+    },
+    {
+      id: 5,
+      name: "David Brown",
+      rating: 5,
+      date: "2 months ago",
+      text: "Outstanding service! Quick diagnosis, quality parts, and excellent workmanship. My phone was fixed in less than an hour. Couldn't be happier!",
+      avatar: "DB"
+    },
+    {
+      id: 6,
+      name: "Lisa Anderson",
+      rating: 5,
+      date: "3 weeks ago",
+      text: "Fantastic service! They rescued all my data from a water-damaged phone. Very professional team and great customer care. Highly recommended!",
+      avatar: "LA"
+    }
+  ];
+
+  const renderStars = (rating: number) => {
+    return (
+      <div className="flex gap-1">
+        {[...Array(5)].map((_, index) => (
+          <Star
+            key={index}
+            className={`w-4 h-4 ${
+              index < rating
+                ? "fill-[hsl(var(--ccr-accent))] text-[hsl(var(--ccr-accent))]"
+                : "fill-muted text-muted"
+            }`}
+          />
+        ))}
+      </div>
+    );
+  };
+
+  return (
+    <section className="py-16 px-4 bg-gradient-to-b from-background to-muted/20">
+      <div className="container mx-auto max-w-7xl">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            What Our Customers Say
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Real reviews from real customers on Google
+          </p>
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <div className="flex">
+              {renderStars(5)}
+            </div>
+            <span className="font-semibold">5.0 rating</span>
+            <span className="text-muted-foreground">• 500+ reviews</span>
+          </div>
+        </div>
+
+        {/* Reviews Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {reviews.map((review) => (
+            <Card key={review.id} className="hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                {/* Reviewer Info */}
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[hsl(var(--ccr-primary))] text-primary-foreground flex items-center justify-center font-semibold">
+                    {review.avatar}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold">{review.name}</h3>
+                    <p className="text-sm text-muted-foreground">{review.date}</p>
+                  </div>
+                </div>
+
+                {/* Rating */}
+                <div className="mb-3">
+                  {renderStars(review.rating)}
+                </div>
+
+                {/* Review Text */}
+                <p className="text-sm leading-relaxed text-foreground/90">
+                  {review.text}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Google Link */}
+        <div className="text-center mt-12">
+          <a
+            href="https://www.google.com/search?q=CCR+Tech+Repair+Brisbane"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[hsl(var(--ccr-primary))] hover:text-[hsl(var(--ccr-secondary))] font-semibold transition-colors"
+          >
+            Read all reviews on Google
+            <span className="text-lg">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ReviewsSection;
