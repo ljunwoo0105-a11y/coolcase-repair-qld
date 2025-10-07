@@ -5,20 +5,23 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b border-border">
       {/* Top bar */}
-      <div className="bg-ccr-primary text-white py-2">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <Phone className="h-4 w-4" />
-              <span>0452385321</span>
+      <div className="bg-gradient-to-r from-[hsl(var(--ccr-primary))] to-[hsl(var(--ccr-secondary))] text-white py-3">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-4 text-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+              <a href="tel:0452385321" className="flex items-center gap-2 hover:text-[hsl(var(--ccr-glow))] transition-colors group">
+                <Phone className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                <span className="font-medium">0452 385 321</span>
+              </a>
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 flex-shrink-0" />
+                <span className="line-clamp-1 md:line-clamp-none">Orion Springfield Central, Kiosk 1/1 Main St, Springfield Central QLD 4300</span>
+              </div>
             </div>
-            <div className="flex items-center gap-1">
-              <MapPin className="h-4 w-4" />
-              <span>Next to Foot Locker and Boost Juice, Near Food Court, BIGW Mall, Orion Springfield Central, Kiosk 1/1 Main St, Springfield Central QLD 4300</span>
+            <div className="hidden lg:flex items-center gap-2 text-xs font-medium bg-white/10 px-3 py-1.5 rounded-full backdrop-blur-sm">
+              <span className="text-[hsl(var(--ccr-glow))]">★★★★★</span>
+              <span>4.9 Rating • 1.5K+ Reviews</span>
             </div>
-          </div>
-          <div className="hidden md:block">
-            
           </div>
         </div>
       </div>
