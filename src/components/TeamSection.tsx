@@ -1,6 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import defaultProfile from "@/assets/default-profile.jpg";
+import avatar1 from "@/assets/avatar-1.jpg";
+import avatar2 from "@/assets/avatar-2.jpg";
+import avatar3 from "@/assets/avatar-3.jpg";
+import avatar4 from "@/assets/avatar-4.jpg";
+import avatar5 from "@/assets/avatar-5.jpg";
+import avatar6 from "@/assets/avatar-6.jpg";
+import avatar7 from "@/assets/avatar-7.jpg";
 const TeamSection = () => {
   return <section id="team" className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
@@ -24,7 +30,7 @@ const TeamSection = () => {
             <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
               <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
                 <div className="relative overflow-hidden">
-                  <img src={defaultProfile} alt="Lucas - Master Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={avatar1} alt="Lucas - Master Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <div className="text-white">
                       <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">20+ years</p>
@@ -43,7 +49,7 @@ const TeamSection = () => {
             <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
               <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
                 <div className="relative overflow-hidden">
-                  <img src={defaultProfile} alt="Ryan - Retail Manager & Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={avatar2} alt="Ryan - Retail Manager & Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <div className="text-white">
                       <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">8+ years</p>
@@ -62,7 +68,7 @@ const TeamSection = () => {
             <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
               <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
                 <div className="relative overflow-hidden">
-                  <img src={defaultProfile} alt="Robert Thompson - Repair Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={avatar3} alt="Robert Thompson - Repair Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <div className="text-white">
                       <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">10+ years</p>
@@ -81,7 +87,7 @@ const TeamSection = () => {
             <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
               <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
                 <div className="relative overflow-hidden">
-                  <img src={defaultProfile} alt="Kyle - IT Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={avatar4} alt="Kyle - IT Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <div className="text-white">
                       <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">4+ years</p>
@@ -100,7 +106,7 @@ const TeamSection = () => {
             <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
               <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
                 <div className="relative overflow-hidden">
-                  <img src={defaultProfile} alt="Sarah - Customer Support Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={avatar5} alt="Sarah - Customer Support Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <div className="text-white">
                       <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">6+ years</p>
@@ -119,7 +125,7 @@ const TeamSection = () => {
             <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
               <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
                 <div className="relative overflow-hidden">
-                  <img src={defaultProfile} alt="James - Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={avatar6} alt="James - Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <div className="text-white">
                       <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">7+ years</p>
@@ -138,7 +144,7 @@ const TeamSection = () => {
             <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
               <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
                 <div className="relative overflow-hidden">
-                  <img src={defaultProfile} alt="Emma - Data Recovery Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={avatar7} alt="Emma - Data Recovery Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <div className="text-white">
                       <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">5+ years</p>
