@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MapPin } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, isAdmin, signOut } = useAuth();
+  const navigate = useNavigate();
   return <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b border-border">
       {/* Top bar */}
       <div className="bg-gradient-to-r from-[hsl(var(--ccr-primary))] to-[hsl(var(--ccr-secondary))] text-white py-3">
@@ -61,12 +65,34 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" className="border-ccr-primary text-ccr-primary hover:bg-ccr-primary hover:text-white">
-              Get Quote
-            </Button>
-            <Button className="bg-ccr-accent hover:bg-ccr-accent/90 text-white">
-              Book Now
-            </Button>
+            {user ? (
+              <>
+                {isAdmin && (
+                  <Button
+                    onClick={() => navigate('/admin')}
+                    variant="outline"
+                    className="border-ccr-primary text-ccr-primary hover:bg-ccr-primary hover:text-white"
+                  >
+                    Admin
+                  </Button>
+                )}
+                <Button
+                  onClick={signOut}
+                  variant="outline"
+                  className="border-ccr-primary text-ccr-primary hover:bg-ccr-primary hover:text-white"
+                >
+                  Sign Out
+                </Button>
+              </>
+            ) : (
+              <Button
+                onClick={() => navigate('/auth')}
+                variant="outline"
+                className="border-ccr-primary text-ccr-primary hover:bg-ccr-primary hover:text-white"
+              >
+                Sign In
+              </Button>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -97,12 +123,43 @@ const Header = () => {
                 Contact
               </a>
               <div className="flex flex-col gap-3 pt-4">
-                <Button variant="outline" className="border-ccr-primary text-ccr-primary hover:bg-ccr-primary hover:text-white">
-                  Get Quote
-                </Button>
-                <Button className="bg-ccr-accent hover:bg-ccr-accent/90 text-white">
-                  Book Now
-                </Button>
+                {user ? (
+                  <>
+                    {isAdmin && (
+                      <Button
+                        onClick={() => {
+                          navigate('/admin');
+                          setIsMenuOpen(false);
+                        }}
+                        variant="outline"
+                        className="border-ccr-primary text-ccr-primary hover:bg-ccr-primary hover:text-white"
+                      >
+                        Admin
+                      </Button>
+                    )}
+                    <Button
+                      onClick={() => {
+                        signOut();
+                        setIsMenuOpen(false);
+                      }}
+                      variant="outline"
+                      className="border-ccr-primary text-ccr-primary hover:bg-ccr-primary hover:text-white"
+                    >
+                      Sign Out
+                    </Button>
+                  </>
+                ) : (
+                  <Button
+                    onClick={() => {
+                      navigate('/auth');
+                      setIsMenuOpen(false);
+                    }}
+                    variant="outline"
+                    className="border-ccr-primary text-ccr-primary hover:bg-ccr-primary hover:text-white"
+                  >
+                    Sign In
+                  </Button>
+                )}
               </div>
             </nav>
           </div>}
