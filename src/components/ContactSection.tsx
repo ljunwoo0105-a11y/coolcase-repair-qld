@@ -3,10 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, MessageSquare } from "lucide-react";
-
 const ContactSection = () => {
-  return (
-    <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -41,7 +39,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
                     <p className="text-muted-foreground">info@coolcaserepair.com.au</p>
-                    <p className="text-sm text-muted-foreground">We respond within 1 hour</p>
+                    <p className="text-sm text-muted-foreground">We respond within 24 hour</p>
                   </div>
                 </div>
 
@@ -115,10 +113,7 @@ const ContactSection = () => {
 
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">Issue Description</label>
-                <Textarea 
-                  placeholder="Describe the problem with your device..."
-                  className="min-h-[120px]"
-                />
+                <Textarea placeholder="Describe the problem with your device..." className="min-h-[120px]" />
               </div>
 
               <Button className="w-full bg-ccr-primary hover:bg-ccr-primary/90 text-white font-semibold py-3">
@@ -132,8 +127,6 @@ const ContactSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;

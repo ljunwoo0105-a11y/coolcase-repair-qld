@@ -1,8 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-gradient-to-br from-ccr-primary via-ccr-secondary to-ccr-accent text-white">
+  return <footer className="bg-gradient-to-br from-ccr-primary via-ccr-secondary to-ccr-accent text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
@@ -60,13 +58,13 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-ccr-glow flex-shrink-0" />
                 <div>
-                  <div>(07) 3000-COOL</div>
+                  <div>0415890924</div>
                   <div className="text-sm">7 days a week</div>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-ccr-glow flex-shrink-0" />
-                <div>info@coolcaserepair.com.au</div>
+                <div>coolcaserepair@gmail.com</div>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-ccr-glow flex-shrink-0" />
@@ -93,8 +91,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
