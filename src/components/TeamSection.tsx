@@ -169,7 +169,7 @@ const TeamSection = () => {
           <p className="text-muted-foreground mb-6">With over 15 years of experience, we're committed to excellence in every repair</p>
           
           <div className="max-w-3xl mx-auto text-left mt-8 bg-card rounded-lg p-6 border border-border">
-            <h3 className="text-lg font-semibold mb-4 text-center">Requirements</h3>
+            <h3 className="text-lg font-semibold mb-4 text-center">Our Requirement</h3>
             <p className="text-sm text-muted-foreground mb-4 text-center">
               To be a certified technician, our technicians have obtained a minimum of 3 of these requirements:
             </p>
