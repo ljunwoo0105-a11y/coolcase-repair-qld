@@ -38,7 +38,7 @@ const TeamSection = () => {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1">Lucas</h3>
+                  <h3 className="text-xl font-bold mb-1">Andy</h3>
                   <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Master Technician</p>
                   <p className="text-sm text-muted-foreground">Advanced Repairs including PCB Board Repairs and Data Recovery</p>
                 </CardContent>
