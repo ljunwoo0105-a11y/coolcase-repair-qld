@@ -1,212 +1,116 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import avatar1 from "@/assets/avatar-1.jpg";
-import avatar2 from "@/assets/avatar-2.jpg";
-import avatar3 from "@/assets/avatar-3.jpg";
-import avatar4 from "@/assets/avatar-4.jpg";
-import avatar5 from "@/assets/avatar-5.jpg";
-import avatar6 from "@/assets/avatar-6.jpg";
-import avatar7 from "@/assets/avatar-7.jpg";
+import { Award, CheckCircle, Database, Headphones, Monitor, ShieldCheck, Smartphone, Wrench } from "lucide-react";
+
+const specialists = [
+  {
+    icon: Wrench,
+    name: "Andy",
+    role: "Master Technician",
+    experience: "20+ years",
+    summary: "Advanced repairs including PCB board repair and complex data recovery.",
+  },
+  {
+    icon: Smartphone,
+    name: "Ryan",
+    role: "Retail Manager & Senior Technician",
+    experience: "8+ years",
+    summary: "Phone, tablet, screen, battery, charging, and customer repair guidance.",
+  },
+  {
+    icon: ShieldCheck,
+    name: "Lucas",
+    role: "Repair Specialist",
+    experience: "10+ years",
+    summary: "Advanced diagnostics, drone repair, device testing, and technical repair planning.",
+  },
+  {
+    icon: Monitor,
+    name: "Kyle",
+    role: "IT Specialist",
+    experience: "4+ years",
+    summary: "Computer repair, performance support, setup, networking, and IT solutions.",
+  },
+  {
+    icon: Headphones,
+    name: "Sarah",
+    role: "Customer Support Specialist",
+    experience: "6+ years",
+    summary: "Repair triage, customer communication, service updates, and booking support.",
+  },
+  {
+    icon: Database,
+    name: "Emma",
+    role: "Data Recovery Specialist",
+    experience: "5+ years",
+    summary: "Data recovery, software troubleshooting, backup support, and transfer services.",
+  },
+];
+
+const requirements = [
+  "Completed Bachelor Degree in Electrical Engineering, Information Technology, or Relevant Degrees",
+  "Minimum 5 years repair experience",
+  "Repaired over 1000 devices per technician",
+  "Completed relevant certified repair courses such as Apple, Samsung, Oppo, Huawei, Google Independent Repair Program, etc.",
+  "Completed IPC Logic Board Repair Program",
+  "Completed Data Recovery Program",
+  "Ex-Apple and Samsung repair technician",
+];
+
 const TeamSection = () => {
-  return <section id="team" className="py-16 px-4 bg-background">
+  return (
+    <section id="team" className="bg-background px-4 py-16">
       <div className="container mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Meet Our Expert Team
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Our certified technicians are dedicated to providing you with the best repair service in Brisbane
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Meet Our Certified Technicians</h2>
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            Certified specialists across repairs, diagnostics, customer support, IT, and data recovery.
           </p>
         </div>
 
-        {/* Team Carousel */}
-        <Carousel opts={{
-        align: "start",
-        loop: true
-      }} className="w-full max-w-6xl mx-auto">
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {/* Team Member 1 */}
-            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
-                <div className="relative overflow-hidden">
-                  <img src={avatar1} alt="Lucas - Master Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <div className="text-white">
-                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">20+ years</p>
-                    </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {specialists.map((member) => (
+            <Card key={member.name} className="group h-full border-border transition-all duration-300 hover:-translate-y-1 hover:border-ccr-primary/50 hover:shadow-ccr-glow">
+              <CardContent className="flex h-full flex-col p-7">
+                <div className="mb-5 flex items-start justify-between gap-4">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-ccr-primary/10 text-ccr-primary transition-colors group-hover:bg-ccr-primary group-hover:text-white">
+                    <member.icon className="h-7 w-7" />
                   </div>
+                  <span className="rounded-full bg-muted px-3 py-1 text-sm font-semibold text-ccr-primary">
+                    {member.experience}
+                  </span>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1">Andy</h3>
-                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Master Technician</p>
-                  <p className="text-sm text-muted-foreground">Advanced Repairs including PCB Board Repairs and Data Recovery</p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
 
-            {/* Team Member 2 */}
-            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
-                <div className="relative overflow-hidden">
-                  <img src={avatar2} alt="Ryan - Retail Manager & Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <div className="text-white">
-                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">8+ years</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1">Ryan</h3>
-                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Retail Manager & Senior Technician</p>
-                  <p className="text-sm text-muted-foreground">Phone, Tablet and Computer Technician</p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
+                <h3 className="mb-1 text-xl font-bold text-foreground">{member.name}</h3>
+                <p className="mb-3 font-semibold text-ccr-primary">{member.role}</p>
+                <p className="leading-relaxed text-muted-foreground">{member.summary}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
-            {/* Team Member 3 */}
-            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
-                <div className="relative overflow-hidden">
-                  <img src={avatar3} alt="Robert Thompson - Repair Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <div className="text-white">
-                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">10+ years</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1">Lucas
-                </h3>
-                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Repair Specialist</p>
-                  <p className="text-sm text-muted-foreground">Advanced Diagnostics, Drone and IT Specialist</p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
+        <div className="mt-12 rounded-lg bg-muted/50 p-8 text-center">
+          <Award className="mx-auto mb-4 h-10 w-10 text-ccr-primary" />
+          <p className="mb-2 text-lg font-medium">All our technicians are fully certified and experienced</p>
+          <p className="mb-6 text-muted-foreground">With over 15 years of experience, we're committed to excellence in every repair.</p>
 
-            {/* Team Member 4 */}
-            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
-                <div className="relative overflow-hidden">
-                  <img src={avatar4} alt="Kyle - IT Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <div className="text-white">
-                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">4+ years</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1">Kyle</h3>
-                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">IT Specialist</p>
-                  <p className="text-sm text-muted-foreground">Computer and IT Solutions</p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-
-            {/* Team Member 5 */}
-            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
-                <div className="relative overflow-hidden">
-                  <img src={avatar5} alt="Sarah - Customer Support Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <div className="text-white">
-                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">6+ years</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1">Sarah</h3>
-                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Customer Support Specialist</p>
-                  <p className="text-sm text-muted-foreground">Phone and Tablet Repairs, Customer Service</p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-
-            {/* Team Member 6 */}
-            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
-                <div className="relative overflow-hidden">
-                  <img src={avatar6} alt="James - Senior Technician" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <div className="text-white">
-                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">7+ years</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1">James</h3>
-                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Senior Technician</p>
-                  <p className="text-sm text-muted-foreground">Screen Repairs and Hardware Diagnostics</p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-
-            {/* Team Member 7 */}
-            <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full">
-                <div className="relative overflow-hidden">
-                  <img src={avatar7} alt="Emma - Data Recovery Specialist" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <div className="text-white">
-                      <p className="text-sm font-medium text-[hsl(var(--ccr-glow))]">5+ years</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1">Emma</h3>
-                  <p className="text-[hsl(var(--ccr-primary))] font-semibold mb-2">Data Recovery Specialist</p>
-                  <p className="text-sm text-muted-foreground">Data Recovery and Software Solutions</p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-
-        {/* Trust Message */}
-        <div className="mt-12 text-center bg-muted/50 rounded-lg p-8">
-          <p className="text-lg font-medium mb-2">All our Technicians are Fully Certified and Experienced</p>
-          <p className="text-muted-foreground mb-6">With over 15 years of experience, we're committed to excellence in every repair</p>
-          
-          <div className="max-w-3xl mx-auto text-left mt-8 bg-card rounded-lg p-6 border border-border">
-            <h3 className="text-lg font-semibold mb-4 text-center">Our Requirements</h3>
-            <p className="text-sm text-muted-foreground mb-4 text-center">
+          <div className="mx-auto mt-8 max-w-3xl rounded-lg border border-border bg-card p-6 text-left">
+            <h3 className="mb-4 text-center text-lg font-semibold">Our Requirements</h3>
+            <p className="mb-4 text-center text-sm text-muted-foreground">
               To be a certified technician, our technicians have obtained a minimum of 3 of these requirements:
             </p>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-start gap-3">
-                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
-                <span>Completed Bachelor Degree in Electrical Engineering, Information Technology, or Relevant Degrees</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
-                <span>Minimum 5 years Repair Experience</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
-                <span>Repaired over 1000 Devices per Technician</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
-                <span>Completed Relevant Certified Repair Courses such as Apple, Samsung, Oppo, Huawei, Google Independent Repair Program, etc.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
-                <span>Completed IPC Logic Board Repair Program</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
-                <span>Completed Data Recovery Program</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[hsl(var(--ccr-primary))] mt-0.5">✓</span>
-                <span>Ex-Apple and Samsung Repair Technician</span>
-              </li>
+              {requirements.map((requirement) => (
+                <li key={requirement} className="flex items-start gap-3">
+                  <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-ccr-primary" />
+                  <span>{requirement}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default TeamSection;
